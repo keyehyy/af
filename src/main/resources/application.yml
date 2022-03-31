@@ -1,7 +1,32 @@
+server:
+  port: 8080
 spring:
   datasource:
     url: jdbc:postgresql://101.200.137.74:5432/test
     username: postgres
     password: 123456kk
     driver-class-name: org.postgresql.Driver
+# MyBatis
+mybatis:
+  # 搜索指定包别名
+  typeAliasesPackage: com.gt
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis-config.xml
+# PageHelper分页插件
+pagehelper:
+  helperDialect: postgresql
+  # 分页合理化参数，默认值为false。
+  # 当该参数设置为 true 时，pageNum<=0 时会查询第一页， pageNum>pages（超过总数时），会查询最后一页。
+  # 默认false 时，直接根据参数进行查询
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+#配置日志输出
+logging:
+  level:
+    com.guanting: DEBUG
+    org.springframework: WARN
 
