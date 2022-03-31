@@ -1,0 +1,25 @@
+17:52:38.143 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 20412 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
+17:52:38.145 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
+17:52:39.081 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+17:52:39.082 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:52:39.082 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+17:52:39.153 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:52:39.754 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+17:52:39.776 [main] INFO  com.gt.AfApplication - Started AfApplication in 2.22 seconds (JVM running for 2.962)
+17:53:45.807 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 17436 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
+17:53:45.812 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
+17:53:46.913 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+17:53:46.914 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:53:46.914 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+17:53:47.000 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:53:47.666 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+17:53:47.692 [main] INFO  com.gt.AfApplication - Started AfApplication in 2.494 seconds (JVM running for 3.324)
+17:55:32.116 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 8744 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
+17:55:32.119 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
+17:55:33.132 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8010"]
+17:55:33.133 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:55:33.135 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+17:55:33.217 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:55:33.895 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8010"]
+17:55:33.920 [main] INFO  com.gt.AfApplication - Started AfApplication in 2.377 seconds (JVM running for 3.125)
+17:55:47.443 [http-nio-8010-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'

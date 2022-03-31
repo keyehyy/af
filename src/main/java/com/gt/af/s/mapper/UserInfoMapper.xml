@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gt.af.s.mapper.UserInfoMapper">
+
+    <select id="selectUserInfo" resultType="com.gt.af.s.model.UserInfo">
+       select u.id,u.username,u.password,ur.rid
+       from user_info u left join user_role ur on u.id = ur.uid
+       where u.username = #{username}
+    </select>
+
+
+
+</mapper>
