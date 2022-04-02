@@ -1,0 +1,18 @@
+
+/**
+ @ Name：高拍仪接口，可以调用插件直接使用高拍仪
+ @ Author：SuperYoung
+ @ License：MIT
+ */
+
+
+/* 样式加载完毕的标识 */
+html #layuicss-gpy{display: none; position: absolute; width: 1989px;}
+
+
+/* 组件样式 */
+.layui-gpy{}
+
+.gt-gpy-main{
+  padding: 10px 20px;
+}

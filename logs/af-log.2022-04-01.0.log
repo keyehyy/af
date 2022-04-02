@@ -1,0 +1,11 @@
+14:20:16.008 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 10628 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
+14:20:16.011 [main] INFO  com.gt.AfApplication - No active profile set, falling back to default profiles: default
+14:20:17.362 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:20:17.362 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:20:17.362 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+14:20:17.462 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:20:18.706 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:20:18.728 [main] INFO  com.gt.AfApplication - Started AfApplication in 3.319 seconds (JVM running for 4.313)
+14:23:41.370 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:23:41.441 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:23:42.037 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
