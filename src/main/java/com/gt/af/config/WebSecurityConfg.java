@@ -80,11 +80,11 @@ public class WebSecurityConfg extends WebSecurityConfigurerAdapter {
                 .disable();
     }
 
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        //配置静态文件不需要认证
-        web.ignoring().antMatchers("/static/**");
-    }
+//    @Override
+//    public void configure(WebSecurity web) throws Exception {
+//        //配置静态文件不需要认证
+//        web.ignoring().antMatchers("/static/**");
+//    }
 
     /**
      * 指定加密方式

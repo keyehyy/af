@@ -46,7 +46,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         //定义权限列表.
         List<GrantedAuthority> authorities = new ArrayList<>();
         // 用户可以访问的资源名称（或者说用户所拥有的权限） 注意：必须"ROLE_"开头
-        authorities.add(new SimpleGrantedAuthority("ROLE_"+ userInfo.getRid()));
+        authorities.addAll(userInfo.getAuthorities());
         User userDetails = new User(userInfo.getUsername(),passwordEncoder.encode(userInfo.getPassword()),authorities);
         return userDetails;
     }

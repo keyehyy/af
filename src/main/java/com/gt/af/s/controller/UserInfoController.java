@@ -5,6 +5,8 @@ import com.gt.af.s.model.UserInfo;
 import com.gt.af.s.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,5 +30,14 @@ public class UserInfoController {
     public int addUserInfo(UserInfo u){
         return userInfoService.addUserInfo(u);
     }
+
+
+    @RequestMapping("getSessionUserInfo")
+    public String addUserInfo(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return null;
+    }
+
+
 
 }

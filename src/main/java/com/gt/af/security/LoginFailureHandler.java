@@ -55,9 +55,5 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
         resultObj.put("msg",errorInfo);
         resultObj.put("exception",objectMapper.writeValueAsString(exception));
         response.getWriter().write(resultObj.toString());
-
-        //表单认证方式
-        //this.saveException(request, exception);
-        //this.getRedirectStrategy().sendRedirect(request, response, "/login?error=true");
     }
 }
