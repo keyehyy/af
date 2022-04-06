@@ -33,7 +33,8 @@ public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessH
         // 获取前端传到后端的全部参数
         Enumeration enu = request.getParameterNames();
         while (enu.hasMoreElements()) {
-            String paraName = (String) enu.nextElement(); System.out.println("参数- " + paraName + " : " + request.getParameter(paraName));
+            String paraName = (String) enu.nextElement();
+            System.out.println("参数- " + paraName + " : " + request.getParameter(paraName));
         }
         logger.info("登录认证成功");
         //这里写你登录成功后的逻辑，可加验证码验证等

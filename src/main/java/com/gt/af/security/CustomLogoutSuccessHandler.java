@@ -1,5 +1,6 @@
 package com.gt.af.security;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
@@ -21,10 +22,9 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
 
     @Override
     public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-        System.out.println("退出成功!");
-        //这里写你登录成功后的逻辑
-        response.setStatus(HttpStatus.OK.value());
-        response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write("退出成功!");
+        JSONObject resultObj = new JSONObject();
+        resultObj.put("code", HttpStatus.OK.value());
+        resultObj.put("msg","退出成功");
+        response.getWriter().write(resultObj.toString());
     }
 }
