@@ -53,7 +53,6 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
         JSONObject resultObj = new JSONObject();
         resultObj.put("code", HttpStatus.UNAUTHORIZED.value());
         resultObj.put("msg",errorInfo);
-        resultObj.put("exception",objectMapper.writeValueAsString(exception));
         response.getWriter().write(resultObj.toString());
     }
 }

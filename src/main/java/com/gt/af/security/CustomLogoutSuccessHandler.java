@@ -22,6 +22,7 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
 
     @Override
     public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+        response.setContentType("application/json;charset=UTF-8");
         JSONObject resultObj = new JSONObject();
         resultObj.put("code", HttpStatus.OK.value());
         resultObj.put("msg","退出成功");

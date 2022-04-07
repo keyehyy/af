@@ -12,7 +12,7 @@
         </collection>
     </resultMap>
 
-    <select id="selectUserInfo" resultType="com.gt.af.s.model.UserInfo">
+    <select id="selectUserInfo" resultMap="userMap">
        select u.id,u.username,u.password,ur.rid,r.name as rname
        from user_info u
 			 left join user_role ur on u.id = ur.uid

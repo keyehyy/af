@@ -25,8 +25,8 @@ import java.util.List;
 public class CustomUserDetailsService implements UserDetailsService {
     @Resource
     private UserInfoService userInfoService;
-    @Resource
-    private PasswordEncoder passwordEncoder;
+//    @Resource
+//    private PasswordEncoder passwordEncoder;
 
     public CustomUserDetailsService(UserInfoService userInfoService) {
         this.userInfoService = userInfoService;
@@ -47,7 +47,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         List<GrantedAuthority> authorities = new ArrayList<>();
         // 用户可以访问的资源名称（或者说用户所拥有的权限） 注意：必须"ROLE_"开头
         authorities.addAll(userInfo.getAuthorities());
-        User userDetails = new User(userInfo.getUsername(),passwordEncoder.encode(userInfo.getPassword()),authorities);
+        User userDetails = new User(userInfo.getUsername(),userInfo.getPassword(),authorities);
         return userDetails;
     }
 }

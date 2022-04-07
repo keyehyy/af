@@ -1,8 +1,10 @@
 package com.gt.af.config;
 
 import com.gt.af.security.CustomAccessDeniedHandler;
+import com.gt.af.security.CustomAuthenticationEntryPoint;
 import com.gt.af.security.CustomLogoutSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -10,6 +12,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
@@ -43,7 +46,7 @@ public class WebSecurityConfg extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(customUserDetailsService).passwordEncoder(new BCryptPasswordEncoder());//使用BCryptPasswordEncoder进行加密
+        auth.userDetailsService(customUserDetailsService);
     }
 
 
@@ -57,12 +60,11 @@ public class WebSecurityConfg extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers("/userInfo/addUserInfo").permitAll()//放开登录注册接口
                 .anyRequest().authenticated()//所有的路径都是登录后即可访问
                 .and()
                 .formLogin().loginPage("/login")//如果是未登录的会自动跳到该接口（根据需要自己实现，返回页面或返回json）
-                .loginProcessingUrl("/login")//发起登录请求的接口
-                .usernameParameter("username")//设置登录请求接口的参数（用户名）
-                .passwordParameter("password")//设置登录请求接口的参数（密码）
+//                .loginProcessingUrl("/doLogin")//发起登录请求的接口
                 .successHandler(loginSuccessHandler)//使用自定义的成功结果处理器
                 .failureHandler(loginFailureHandler)//使用自定义失败的结果处理器
                 .permitAll()
@@ -72,6 +74,7 @@ public class WebSecurityConfg extends WebSecurityConfigurerAdapter {
                 .logoutSuccessHandler(new CustomLogoutSuccessHandler())
                 .permitAll()
                 .and().csrf().disable().exceptionHandling()
+                .authenticationEntryPoint(new CustomAuthenticationEntryPoint())//未认证权限不足
                 .accessDeniedHandler(new CustomAccessDeniedHandler());//用户权限不足时的处理
     }
 
@@ -128,9 +131,9 @@ public class WebSecurityConfg extends WebSecurityConfigurerAdapter {
 //    /**
 //     * 指定加密方式
 //     */
-//    @Bean
-//    public PasswordEncoder passwordEncoder(){
-//        // 使用BCrypt加密密码
-//        return new BCryptPasswordEncoder();
-//    }
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        // 使用BCrypt加密密码
+        return new BCryptPasswordEncoder();
+    }
 }

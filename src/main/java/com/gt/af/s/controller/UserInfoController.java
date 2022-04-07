@@ -27,8 +27,9 @@ public class UserInfoController {
     }
 
     @RequestMapping("addUserInfo")
-    public int addUserInfo(UserInfo u){
-        return userInfoService.addUserInfo(u);
+    public String addUserInfo(UserInfo u){
+        userInfoService.addUserInfo(u);
+        return "注册成功";
     }
 
 
