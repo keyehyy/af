@@ -1,7 +1,7 @@
 package com.gt.af.s.service;
 
-import com.gt.af.s.mapper.UserInfoMapper;
-import com.gt.af.s.model.UserInfo;
+import com.gt.af.s.mapper.SysUserMapper;
+import com.gt.af.s.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -13,15 +13,16 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 public class UserInfoService {
     @Autowired
-    private UserInfoMapper userInfoMapper;
+    private SysUserMapper sysUserMapper;
 
-    public UserInfo getUserInfoByUsername(String username){
-        return userInfoMapper.selectUserInfo(username);
+    public SysUser getUserInfoByUsername(String username){
+        return sysUserMapper.selectSysUser(username,null);
     }
 
-    public  int addUserInfo(UserInfo u){
+    public  String addUserInfo(SysUser u){
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         u.setPassword(passwordEncoder.encode(u.getPassword()));
-        return userInfoMapper.insertSelective(u);
+        sysUserMapper.insertSysUser(u);
+        return "新增成功";
     }
 }

@@ -107,7 +107,7 @@ Caused by: java.lang.ClassNotFoundException: com.gt.common
 	at org.springframework.util.ClassUtils.forName(ClassUtils.java:284)
 	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:324)
 	... 79 common frames omitted
-10:51:41.257 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+10:51:41.257 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 10:51:41.257 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 10:51:41.961 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 10:51:41.962 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -211,7 +211,7 @@ Caused by: tk.mybatis.mapper.MapperException: id - 该字段@GeneratedValue配�
 	... 51 common frames omitted
 10:52:53.360 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 14280 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 10:52:53.363 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-10:52:54.266 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+10:52:54.266 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 10:52:54.266 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 10:52:54.779 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 10:52:54.779 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -315,7 +315,7 @@ Caused by: tk.mybatis.mapper.MapperException: id - 该字段@GeneratedValue配�
 	... 51 common frames omitted
 10:56:49.930 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 9856 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 10:56:49.932 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-10:56:50.660 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+10:56:50.660 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 10:56:50.660 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 10:56:51.192 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 10:56:51.193 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -419,7 +419,7 @@ Caused by: tk.mybatis.mapper.MapperException: id - 该字段@GeneratedValue配�
 	... 51 common frames omitted
 11:46:39.472 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 16768 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 11:46:39.475 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-11:46:40.049 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+11:46:40.049 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 11:46:40.049 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 11:46:40.535 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 11:46:40.536 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -523,7 +523,7 @@ Caused by: tk.mybatis.mapper.MapperException: id - 该字段@GeneratedValue配�
 	... 51 common frames omitted
 11:49:16.952 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 14888 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 11:49:16.954 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-11:49:17.526 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+11:49:17.526 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 11:49:17.526 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 11:49:18.009 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 11:49:18.010 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -552,7 +552,7 @@ Relying upon circular references is discouraged and they are prohibited by defau
 
 11:51:32.539 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 12768 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 11:51:32.542 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-11:51:33.295 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+11:51:33.295 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 11:51:33.296 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 11:51:33.842 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 11:51:33.842 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -581,7 +581,7 @@ Relying upon circular references is discouraged and they are prohibited by defau
 
 14:34:03.856 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 20076 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 14:34:03.859 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-14:34:04.399 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+14:34:04.399 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 14:34:04.399 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 14:34:04.892 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 14:34:04.893 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -610,7 +610,7 @@ Relying upon circular references is discouraged and they are prohibited by defau
 
 14:36:23.470 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 17700 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 14:36:23.472 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-14:36:24.114 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+14:36:24.114 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 14:36:24.114 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 14:36:24.615 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 14:36:24.615 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -639,7 +639,7 @@ Relying upon circular references is discouraged and they are prohibited by defau
 
 14:40:51.878 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 8780 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 14:40:51.880 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-14:40:52.464 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+14:40:52.464 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 14:40:52.464 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 14:40:52.960 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 14:40:52.961 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -686,7 +686,7 @@ Caused by: java.lang.ClassNotFoundException: com.github.pagehelper.PageIntercept
 	... 26 common frames omitted
 14:58:50.734 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 14508 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 14:58:50.742 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-14:58:51.497 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+14:58:51.497 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 14:58:51.497 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 14:58:52.047 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 14:58:52.048 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -733,7 +733,7 @@ Caused by: java.lang.ClassNotFoundException: com.github.pagehelper.PageIntercept
 	... 26 common frames omitted
 15:32:42.752 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 14392 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 15:32:42.755 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-15:32:43.358 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+15:32:43.358 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 15:32:43.358 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 15:32:43.828 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 15:32:43.828 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -780,7 +780,7 @@ Caused by: java.lang.ClassNotFoundException: com.github.pagehelper.PageIntercept
 	... 26 common frames omitted
 15:33:30.779 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 7272 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 15:33:30.781 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-15:33:31.348 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+15:33:31.348 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 15:33:31.349 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 15:33:31.838 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 15:33:31.838 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -790,7 +790,7 @@ Caused by: java.lang.ClassNotFoundException: com.github.pagehelper.PageIntercept
 15:33:32.930 [main] INFO  com.gt.AfApplication - Started AfApplication in 2.678 seconds (JVM running for 3.405)
 15:38:45.096 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 6564 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 15:38:45.098 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-15:38:46.049 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+15:38:46.049 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 15:38:46.049 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 15:38:46.586 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 15:38:46.586 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
@@ -819,7 +819,7 @@ Relying upon circular references is discouraged and they are prohibited by defau
 
 15:49:29.771 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 5088 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
 15:49:29.774 [main] INFO  com.gt.AfApplication - No active profile set, falling back to 1 default profile: "default"
-15:49:30.575 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+15:49:30.575 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.gt.af.s.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
 15:49:30.576 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.gt]' package. Please check your configuration.
 15:49:30.937 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 15:49:30.938 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]

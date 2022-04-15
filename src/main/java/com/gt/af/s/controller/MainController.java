@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 
-    @GetMapping("/login")
-    public String loginPage(){
-        System.out.println("login page");
-        return "login";
-    }
+//    @GetMapping("/login")
+//    public String loginPage(){
+//        System.out.println("login page");
+//        return "login";
+//    }
     @GetMapping("/index")
     @PreAuthorize("hasAnyRole('USER','ADMIN')")
     public String index(){

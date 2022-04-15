@@ -169,7 +169,7 @@ org.apache.ibatis.reflection.ReflectionException: There is no getter for propert
 ### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: column "id" does not exist
   位置：9
 ### The error may exist in com/gt/af/s/mapper/UserInfoMapper.java (best guess)
-### The error may involve com.gt.af.s.mapper.UserInfoMapper.selectOneByExample-Inline
+### The error may involve com.gt.af.s.mapper.SysUserMapper.selectOneByExample-Inline
 ### The error occurred while setting parameters
 ### SQL: SELECT  id,username,password,role  FROM user  WHERE       (  username = ? )
 ### Cause: org.postgresql.util.PSQLException: ERROR: column "id" does not exist
@@ -289,7 +289,7 @@ org.postgresql.util.PSQLException: ERROR: column "id" does not exist
 ### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: column "username" does not exist
   位置：12
 ### The error may exist in com/gt/af/s/mapper/UserInfoMapper.java (best guess)
-### The error may involve com.gt.af.s.mapper.UserInfoMapper.selectOneByExample-Inline
+### The error may involve com.gt.af.s.mapper.SysUserMapper.selectOneByExample-Inline
 ### The error occurred while setting parameters
 ### SQL: SELECT  id,username,password,role  FROM user_info  WHERE       (  username = ? )
 ### Cause: org.postgresql.util.PSQLException: ERROR: column "username" does not exist
@@ -478,7 +478,7 @@ org.postgresql.util.PSQLException: This connection has been closed.
 ### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: column "role" does not exist
   位置：30
 ### The error may exist in com/gt/af/s/mapper/UserInfoMapper.java (best guess)
-### The error may involve com.gt.af.s.mapper.UserInfoMapper.selectOneByExample-Inline
+### The error may involve com.gt.af.s.mapper.SysUserMapper.selectOneByExample-Inline
 ### The error occurred while setting parameters
 ### SQL: SELECT  id,username,password,role  FROM user_info  WHERE       (  username = ? )
 ### Cause: org.postgresql.util.PSQLException: ERROR: column "role" does not exist
@@ -587,7 +587,7 @@ org.postgresql.util.PSQLException: ERROR: column "role" does not exist
 ### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: column "role" does not exist
   位置：30
 ### The error may exist in com/gt/af/s/mapper/UserInfoMapper.java (best guess)
-### The error may involve com.gt.af.s.mapper.UserInfoMapper.selectOneByExample-Inline
+### The error may involve com.gt.af.s.mapper.SysUserMapper.selectOneByExample-Inline
 ### The error occurred while setting parameters
 ### SQL: SELECT  id,username,password,role  FROM user_info  WHERE       (  username = ? )
 ### Cause: org.postgresql.util.PSQLException: ERROR: column "role" does not exist
@@ -714,8 +714,8 @@ org.postgresql.util.PSQLException: ERROR: column "role" does not exist
 10:26:25.647 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 10:26:25.697 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 10:26:26.088 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-10:26:26.132 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.UserInfoMapper.selectUserInfo] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.UserInfoMapper.selectUserInfo
+10:26:26.132 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.SysUserMapper.selectUserInfo] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.SysUserMapper.selectUserInfo
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
@@ -867,8 +867,8 @@ org.postgresql.util.PSQLException: This connection has been closed.
 10:41:48.882 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5705c4a0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
 10:41:53.895 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2234ee9b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
 10:41:58.903 [http-nio-8080-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5a06427f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-10:41:58.939 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.UserInfoMapper.selectUserInfo] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.UserInfoMapper.selectUserInfo
+10:41:58.939 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.SysUserMapper.selectUserInfo] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.SysUserMapper.selectUserInfo
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
@@ -940,8 +940,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-10:42:00.110 [http-nio-8080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.UserInfoMapper.selectUserInfo] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.UserInfoMapper.selectUserInfo
+10:42:00.110 [http-nio-8080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.SysUserMapper.selectUserInfo] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.SysUserMapper.selectUserInfo
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
@@ -1013,8 +1013,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-10:42:06.083 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.UserInfoMapper.selectUserInfo] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.UserInfoMapper.selectUserInfo
+10:42:06.083 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.SysUserMapper.selectUserInfo] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.gt.af.s.mapper.SysUserMapper.selectUserInfo
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
@@ -1112,7 +1112,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 ### Error updating database.  Cause: org.postgresql.util.PSQLException: ERROR: null value in column "id" violates not-null constraint
   详细：Failing row contains (null, hyy, 123456).
 ### The error may exist in com/gt/af/s/mapper/UserInfoMapper.java (best guess)
-### The error may involve com.gt.af.s.mapper.UserInfoMapper.insertSelective-Inline
+### The error may involve com.gt.af.s.mapper.SysUserMapper.insertSelective-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO user_info  ( username,password ) VALUES( ?,? )
 ### Cause: org.postgresql.util.PSQLException: ERROR: null value in column "id" violates not-null constraint

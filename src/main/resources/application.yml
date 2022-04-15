@@ -2,9 +2,9 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://101.200.137.74:5432/test
+    url: jdbc:postgresql://192.168.1.227:5432/gtxf
     username: postgres
-    password: 123456kk
+    password: 123456
     driver-class-name: org.postgresql.Driver
 # MyBatis
 mybatis:

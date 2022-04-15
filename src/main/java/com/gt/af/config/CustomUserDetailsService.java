@@ -1,6 +1,8 @@
 package com.gt.af.config;
 
-import com.gt.af.s.model.UserInfo;
+import com.gt.af.s.model.SysPermission;
+import com.gt.af.s.model.SysUser;
+import com.gt.af.s.service.SysPermissionService;
 import com.gt.af.s.service.UserInfoService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -8,25 +10,20 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Author qt
- * @Date 2021/3/25
- * @Description
- */
+
 
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
     @Resource
     private UserInfoService userInfoService;
-//    @Resource
-//    private PasswordEncoder passwordEncoder;
+    @Resource
+    private SysPermissionService sysPermissionService;
 
     public CustomUserDetailsService(UserInfoService userInfoService) {
         this.userInfoService = userInfoService;
@@ -34,20 +31,38 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        /**
-         * 1/通过userName 获取到userInfo信息
-         * 2/通过User（UserDetails）返回details。
-         */
+        Boolean isEnabled = true; // 账户是否可用 默认可用
+        Boolean idAccountNonExpired = true; // 账户是否过期 默认未过期
+        Boolean isAccountNonLocked = true;// 账户是否锁定 默认未锁定
+        Boolean isCredentialsNonExpired = true;// 证书（密码）是否过期
         //通过userName获取用户信息
-        UserInfo userInfo = userInfoService.getUserInfoByUsername(username);
-        if(userInfo == null) {
+        SysUser sysUser = userInfoService.getUserInfoByUsername(username);
+        if(sysUser == null) {
             throw new UsernameNotFoundException("查询不到用户信息");
         }
         //定义权限列表.
-        List<GrantedAuthority> authorities = new ArrayList<>();
-        // 用户可以访问的资源名称（或者说用户所拥有的权限） 注意：必须"ROLE_"开头
-        authorities.addAll(userInfo.getAuthorities());
-        User userDetails = new User(userInfo.getUsername(),userInfo.getPassword(),authorities);
-        return userDetails;
+        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+        //获取该用户所拥有的权限
+        List<SysPermission> sysPermissions = sysPermissionService.selecPermissiontListByUser(sysUser.getId());
+        // 声明用户授权
+        sysPermissions.forEach(sysPermission -> {
+            GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(sysPermission.getPermission_code());
+            authorities.add(grantedAuthority);
+        });
+
+        switch (sysUser.getAccount_status()) {
+            case "2":
+                isAccountNonLocked = false;
+                break;
+            case "3":
+                idAccountNonExpired = false;
+                break;
+            case "4":
+                isCredentialsNonExpired = false;
+                break;
+            default:
+                break;
+        }
+        return new User(sysUser.getUsername(), sysUser.getPassword(), isEnabled,idAccountNonExpired, isAccountNonLocked, isCredentialsNonExpired, authorities);
     }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gt.af.s.mapper.SysPathMapper">
+
+
+    <!--查询单个-->
+    <select id="querySysPathById" resultType="com.gt.af.s.model.SysPath">
+        select
+          id, url, url_desc
+        from sys_path
+        where id = #{id}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="querySysPathAll" resultType="com.gt.af.s.model.SysPath">
+        select
+          #allSqlColumn()
+
+        from sys_path
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="url != null and url != ''">
+                and url = #{url}
+            </if>
+            <if test="urlDesc != null and urlDesc != ''">
+                and url_desc = #{urlDesc}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insertSysPath" parameterType="com.gt.af.s.model.SysPath">
+        insert into sys_path(id, url, url_desc)
+        values (#{id}, #{url}, #{urlDesc})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="updateSysPath">
+        update sys_path
+        <set>
+            <if test="url != null and url != ''">
+                url = #{url},
+            </if>
+            <if test="urlDesc != null and urlDesc != ''">
+                url_desc = #{urlDesc},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteSysPathById">
+        delete from sys_path where id = #{id}
+    </delete>
+
+</mapper>
