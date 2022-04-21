@@ -6,6 +6,15 @@ spring:
     username: postgres
     password: 123456
     driver-class-name: org.postgresql.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 10 #最大连接数
+        max-idle: 8 #最大空闲连接
+        min-idle: 0 #最小空闲连接
 # MyBatis
 mybatis:
   # 搜索指定包别名

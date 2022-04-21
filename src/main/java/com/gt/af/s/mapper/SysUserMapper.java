@@ -4,6 +4,8 @@ import com.gt.af.s.model.SysUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Map;
+
 
 @Mapper
 public interface SysUserMapper{
@@ -20,4 +22,5 @@ public interface SysUserMapper{
      * @date 2022/4/14
      */
     int insertSysUser(SysUser sysUser);
+
 }

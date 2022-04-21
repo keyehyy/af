@@ -8,6 +8,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Service
 @Transactional
 @Slf4j
@@ -25,4 +28,6 @@ public class UserInfoService {
         sysUserMapper.insertSysUser(u);
         return "新增成功";
     }
+
+
 }

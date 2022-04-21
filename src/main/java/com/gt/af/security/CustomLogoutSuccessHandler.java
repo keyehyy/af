@@ -27,5 +27,6 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
         resultObj.put("code", HttpStatus.OK.value());
         resultObj.put("msg","退出成功");
         response.getWriter().write(resultObj.toString());
+        log.info("====退出成功=====");
     }
 }

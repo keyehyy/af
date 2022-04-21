@@ -20,4 +20,5 @@
       INSERT INTO sys_user (username,password,create_time,create_user,account_status)
       VALUES  (#{username},#{password},now(),#{create_user},'1')
     </insert>
+
 </mapper>
