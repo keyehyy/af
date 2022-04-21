@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class SysUser implements Serializable {
@@ -17,5 +18,6 @@ public class SysUser implements Serializable {
     private String create_user;//创建人
     private String update_user;//修改人
     private String account_status;//账户状态（1：正常2：账户锁定3：账户过期 4:密码或证书过期）
+    private List<SysRole> roles;// 用户角色
 }
 

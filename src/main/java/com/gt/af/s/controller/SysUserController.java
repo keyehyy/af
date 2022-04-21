@@ -20,9 +20,9 @@ public class SysUserController {
     @Autowired
     private UserInfoService userInfoService;
 
-    @RequestMapping("getUserInfoByUsername")
-    public SysUser getUserInfoByUsername(String username){
-        return userInfoService.getUserInfoByUsername(username);
+    @RequestMapping("selectSysUser")
+    public SysUser selectSysUser(String username){
+        return userInfoService.selectSysUser(username);
     }
 
     @RequestMapping("addUserInfo")
@@ -30,7 +30,6 @@ public class SysUserController {
         userInfoService.addUserInfo(u);
         return "注册成功";
     }
-
 
     @RequestMapping("getSessionUserInfo")
     public String addUserInfo(){

@@ -2,7 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.gt.af.s.mapper.SysUserMapper">
 
-
+        <resultMap id="userMap" type="com.gt.af.s.model.SysUser">
+            <id property="id" column="id"/>
+            <result property="username" column="username"/>
+            <result property="password" column="password"/>
+            <result property="last_login_time" column="last_login_time"/>
+            <result property="create_time" column="create_time"/>
+            <result property="update_time" column="update_time"/>
+            <result property="create_user" column="create_user"/>
+            <result property="update_user" column="update_user"/>
+            <result property="account_status" column="account_status"/>
+            <collection property="roles" ofType="com.gt.af.s.model.SysRole">
+                <id column="rid" property="id"/>
+                <result column="role_name" property="role_name"/>
+                <result column="role_desc" property="role_desc"/>
+            </collection>
+        </resultMap>
 
     <select id="selectSysUser" resultType="com.gt.af.s.model.SysUser">
        select id,username,password,last_login_time,create_time,update_time,create_user,update_user,account_status from sys_user
@@ -16,9 +31,24 @@
        </where>
     </select>
 
-    <insert id="insertSysUser" keyProperty="id" useGeneratedKeys="true">
-      INSERT INTO sys_user (username,password,create_time,create_user,account_status)
-      VALUES  (#{username},#{password},now(),#{create_user},'1')
+    <insert id="insertSysUser">
+      INSERT INTO sys_user (id,username,password,create_time,create_user,account_status)
+      VALUES  (#{id},#{username},#{password},now(),#{create_user},'1')
     </insert>
+
+    <select id="selectUserAndRole" resultMap="userMap">
+        select u.id,u.username,u.password,u.last_login_time,u.create_time,u.update_time,u.create_user,u.update_user,u.account_status,
+        r.id as rid,r.role_name,r.role_desc from sys_user u
+        LEFT JOIN sys_user_role ur on u.id = ur.uid
+        LEFT JOIN sys_role r on ur.rid = r.id
+        <where>
+            <if test="username != null and username != ''">
+                AND u.username = #{username}
+            </if>
+            <if test="id != null and id != ''">
+                AND u.id = #{id}
+            </if>
+        </where>
+    </select>
 
 </mapper>

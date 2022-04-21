@@ -4,8 +4,6 @@ import com.gt.af.s.model.SysUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.Map;
-
 
 @Mapper
 public interface SysUserMapper{
@@ -15,6 +13,14 @@ public interface SysUserMapper{
      * @date 2022/4/14
      */
     SysUser selectSysUser(@Param("username") String username, @Param("id") String id);
+
+
+    /**
+     * @desc 查询单个用户和角色信息
+     * @author zhukeyan
+     * @date 2022/4/14
+     */
+    SysUser selectUserAndRole(@Param("username") String username, @Param("id") String id);
 
     /**
      * @desc 新增用户信息

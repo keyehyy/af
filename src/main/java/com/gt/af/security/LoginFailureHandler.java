@@ -46,7 +46,7 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
         } else if (exception instanceof DisabledException) {
             errorInfo = "账户被禁用，请联系管理员!";
         } else {
-            errorInfo = "登录失败!";
+            errorInfo = exception.getMessage();
         }
         logger.info("登录失败原因：" + errorInfo);
         //ajax请求认证方式

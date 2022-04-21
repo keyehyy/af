@@ -1,0 +1,65 @@
+15:58:25.450 [http-nio-8080-exec-4] INFO  c.gt.af.security.LoginFailureHandler - 登录失败
+15:58:25.461 [http-nio-8080-exec-4] INFO  c.gt.af.security.LoginFailureHandler - 登录失败原因：账户名或者密码输入错误!
+15:58:40.717 [http-nio-8080-exec-6] INFO  c.gt.af.security.LoginSuccessHandler - 登录认证成功
+16:05:45.155 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 1424 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
+16:05:45.157 [main] INFO  com.gt.AfApplication - No active profile set, falling back to default profiles: default
+16:05:46.887 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:05:46.888 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:05:46.888 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+16:05:47.000 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:05:48.119 [main] WARN  c.g.a.s.CustomizeAbstractSecurityInterceptor - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+16:05:54.982 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:05:55.038 [main] INFO  com.gt.AfApplication - Started AfApplication in 10.494 seconds (JVM running for 11.491)
+16:06:39.840 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:06:40.013 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:06:40.173 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:07:21.125 [http-nio-8080-exec-2] INFO  c.gt.af.security.LoginFailureHandler - 登录失败
+16:07:21.127 [http-nio-8080-exec-2] INFO  c.gt.af.security.LoginFailureHandler - 登录失败原因：账户被禁用，请联系管理员!
+16:07:42.210 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+16:07:42.217 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+16:07:59.991 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 25024 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
+16:08:00.036 [main] INFO  com.gt.AfApplication - No active profile set, falling back to default profiles: default
+16:08:01.515 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:08:01.516 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:08:01.516 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+16:08:01.633 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:08:02.916 [main] WARN  c.g.a.s.CustomizeAbstractSecurityInterceptor - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+16:08:10.691 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:08:10.741 [main] INFO  com.gt.AfApplication - Started AfApplication in 11.743 seconds (JVM running for 13.25)
+16:08:14.299 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:08:14.458 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:08:14.630 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:09:01.168 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s431ms659µs).
+16:09:09.267 [http-nio-8080-exec-2] INFO  c.gt.af.security.LoginSuccessHandler - 登录认证成功
+16:14:35.630 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s374ms281µs).
+16:16:57.213 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m21s583ms443µs).
+16:29:10.381 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s369ms747µs200ns).
+16:45:45.107 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+16:45:45.111 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+16:45:50.376 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 29832 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
+16:45:50.382 [main] INFO  com.gt.AfApplication - No active profile set, falling back to default profiles: default
+16:45:51.745 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:45:51.746 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:45:51.746 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+16:45:51.829 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:45:52.110 [main] WARN  c.g.a.s.CustomizeAbstractSecurityInterceptor - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+16:45:52.907 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:45:52.929 [main] INFO  com.gt.AfApplication - Started AfApplication in 3.214 seconds (JVM running for 4.432)
+16:47:13.019 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:47:13.043 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:47:13.136 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:47:36.198 [http-nio-8080-exec-3] INFO  c.gt.af.security.LoginSuccessHandler - 登录认证成功
+18:10:09.693 [main] INFO  com.gt.AfApplication - Starting AfApplication using Java 1.8.0_181 on DESKTOP-7CPP46P with PID 15792 (E:\Code\Projects\af\target\classes started by zky in E:\Code\Projects\af)
+18:10:09.698 [main] INFO  com.gt.AfApplication - No active profile set, falling back to default profiles: default
+18:10:11.330 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+18:10:11.330 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:10:11.331 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+18:10:11.443 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:10:12.230 [main] WARN  c.g.a.s.CustomizeAbstractSecurityInterceptor - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+18:10:13.750 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+18:10:14.373 [main] INFO  com.gt.AfApplication - Started AfApplication in 5.423 seconds (JVM running for 6.69)
+18:15:01.858 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:15:01.980 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:15:02.057 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:15:02.229 [http-nio-8080-exec-2] INFO  c.gt.af.security.LoginSuccessHandler - 登录认证成功
+18:19:12.393 [http-nio-8080-exec-5] INFO  c.gt.af.security.LoginSuccessHandler - 登录认证成功

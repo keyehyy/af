@@ -36,9 +36,12 @@ public class CustomUserDetailsService implements UserDetailsService {
         Boolean isAccountNonLocked = true;// 账户是否锁定 默认未锁定
         Boolean isCredentialsNonExpired = true;// 证书（密码）是否过期
         //通过userName获取用户信息
-        SysUser sysUser = userInfoService.getUserInfoByUsername(username);
+        SysUser sysUser = userInfoService.selectUserAndRole(username);
         if(sysUser == null) {
             throw new UsernameNotFoundException("查询不到用户信息");
+        }
+        if(sysUser.getRoles().isEmpty()){
+            throw new RuntimeException("账户未绑定角色");
         }
         //定义权限列表.
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
