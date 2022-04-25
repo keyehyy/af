@@ -1,6 +1,7 @@
 package com.gt.af.security;
 
 import com.alibaba.fastjson.JSONObject;
+import com.gt.common.constant.ReturnCode;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.web.session.SessionInformationExpiredEvent;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @desc 会话超时
+ * @desc 登录限制提醒
  * @author zhukeyan
  * @date 2022/4/7
  */
@@ -23,8 +24,8 @@ public class CustomizeSessionInformationExpiredStrategy implements SessionInform
         HttpServletResponse response = sessionInformationExpiredEvent.getResponse();
         response.setContentType("application/json;charset=UTF-8");
         JSONObject resultObj = new JSONObject();
-        resultObj.put("code", HttpStatus.OK.value());
-        resultObj.put("msg","账号在另一台电脑登录，请重新登录");
+        resultObj.put("code", ReturnCode.accountLoginOther.getCode());
+        resultObj.put("msg",ReturnCode.accountLoginOther.getMsg());
         response.getWriter().write(resultObj.toString());
     }
 }

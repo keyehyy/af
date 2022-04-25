@@ -1,7 +1,7 @@
 package com.gt.af.config;
 
-import com.gt.af.s.model.SysPermission;
-import com.gt.af.s.model.SysUser;
+import com.gt.af.s.domain.SysPermission;
+import com.gt.af.s.domain.SysUser;
 import com.gt.af.s.service.SysPermissionService;
 import com.gt.af.s.service.UserInfoService;
 import org.springframework.security.core.GrantedAuthority;

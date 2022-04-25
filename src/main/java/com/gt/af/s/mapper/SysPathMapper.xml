@@ -4,7 +4,7 @@
 
 
     <!--查询单个-->
-    <select id="querySysPathById" resultType="com.gt.af.s.model.SysPath">
+    <select id="querySysPathById" resultType="com.gt.af.s.domain.SysPath">
         select
           id, url, url_desc
         from sys_path
@@ -12,7 +12,7 @@
     </select>
 
     <!--通过实体作为筛选条件查询-->
-    <select id="querySysPathAll" resultType="com.gt.af.s.model.SysPath">
+    <select id="querySysPathAll" resultType="com.gt.af.s.domain.SysPath">
         select
           #allSqlColumn()
 
@@ -31,7 +31,7 @@
     </select>
 
     <!--新增所有列-->
-    <insert id="insertSysPath" parameterType="com.gt.af.s.model.SysPath">
+    <insert id="insertSysPath" parameterType="com.gt.af.s.domain.SysPath">
         insert into sys_path(id, url, url_desc)
         values (#{id}, #{url}, #{urlDesc})
     </insert>

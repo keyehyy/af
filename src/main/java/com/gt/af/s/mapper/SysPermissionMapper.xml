@@ -4,7 +4,7 @@
 
 
     <!--通过实体作为筛选条件查询-->
-    <select id="querySysPermissionAll" resultType="com.gt.af.s.model.SysPermission">
+    <select id="querySysPermissionAll" resultType="com.gt.af.s.domain.SysPermission">
         select
           #allSqlColumn()
 
@@ -23,7 +23,7 @@
     </select>
 
     <!--新增所有列-->
-    <insert id="insertSysPermission" parameterType="com.gt.af.s.model.SysPermission">
+    <insert id="insertSysPermission" parameterType="com.gt.af.s.domain.SysPermission">
         insert into sys_permission(id, permission_code, permission_name)
         values (#{id}, #{permissionCode}, #{permissionName})
     </insert>
@@ -47,7 +47,7 @@
         delete from sys_permission where id = #{id}
     </delete>
 
-    <select id="selecPermissiontListByUser" resultType="com.gt.af.s.model.SysPermission">
+    <select id="selecPermissiontListByUser" resultType="com.gt.af.s.domain.SysPermission">
         SELECT
         p.id,p.permission_code,p.permission_name
         FROM
@@ -64,7 +64,7 @@
     </select>
 
 
-    <select id="selectPermissionListByPath" resultType="com.gt.af.s.model.SysPermission">
+    <select id="selectPermissionListByPath" resultType="com.gt.af.s.domain.SysPermission">
         SELECT
             pe.id,pe.permission_code,pe.permission_name
         FROM

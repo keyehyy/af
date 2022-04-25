@@ -2,6 +2,7 @@ package com.gt.af.security;
 
 import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gt.common.constant.ReturnCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.*;
@@ -30,28 +31,34 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-        logger.info("登录失败");
         response.setContentType("application/json;charset=UTF-8");
         //这里写你登录失败后的逻辑，可加验证码验证等
         String errorInfo = "";
+        String code = "0";
         if ((exception instanceof BadCredentialsException) ||
                 (exception instanceof UsernameNotFoundException)) {
-            errorInfo = "账户名或者密码输入错误!";
+            code = ReturnCode.accountNotFound.getCode();
+            errorInfo = ReturnCode.accountNotFound.getMsg();
         } else if (exception instanceof LockedException) {
-            errorInfo = "账户被锁定，请联系管理员!";
+            code = ReturnCode.accountLocked.getCode();
+            errorInfo = ReturnCode.accountLocked.getMsg();
         } else if (exception instanceof CredentialsExpiredException) {
-            errorInfo = "密码过期，请联系管理员!";
+            code = ReturnCode.accountPasswordExpired.getCode();
+            errorInfo = ReturnCode.accountPasswordExpired.getMsg();
         } else if (exception instanceof AccountExpiredException) {
-            errorInfo = "账户过期，请联系管理员!";
+            code = ReturnCode.accountExpired.getCode();
+            errorInfo = ReturnCode.accountExpired.getMsg();
         } else if (exception instanceof DisabledException) {
-            errorInfo = "账户被禁用，请联系管理员!";
+            code = ReturnCode.accountDisabled.getCode();
+            errorInfo = ReturnCode.accountDisabled.getMsg();
         } else {
-            errorInfo = exception.getMessage();
+            code = ReturnCode.accountLoginFailure.getCode();
+            errorInfo = ReturnCode.accountLoginFailure.getMsg();
         }
         logger.info("登录失败原因：" + errorInfo);
         //ajax请求认证方式
         JSONObject resultObj = new JSONObject();
-        resultObj.put("code", HttpStatus.UNAUTHORIZED.value());
+        resultObj.put("code", code);
         resultObj.put("msg",errorInfo);
         response.getWriter().write(resultObj.toString());
     }

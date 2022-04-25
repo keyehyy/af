@@ -1,5 +1,5 @@
 package com.gt.af.s.mapper;
-import com.gt.af.s.model.SysRole;
+import com.gt.af.s.domain.SysRole;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

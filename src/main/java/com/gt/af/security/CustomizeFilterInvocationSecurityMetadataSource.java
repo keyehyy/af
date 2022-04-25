@@ -1,6 +1,6 @@
 package com.gt.af.security;
 
-import com.gt.af.s.model.SysPermission;
+import com.gt.af.s.domain.SysPermission;
 import com.gt.af.s.service.SysPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
@@ -14,9 +14,9 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @Author: Hutengfei
- * @Description:
- * @Date Create in 2019/9/3 21:06
+ * @desc 拦截请求接口
+ * @author zhukeyan
+ * @date 2022/4/25
  */
 @Component
 public class CustomizeFilterInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {

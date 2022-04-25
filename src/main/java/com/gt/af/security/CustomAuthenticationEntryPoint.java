@@ -1,6 +1,7 @@
 package com.gt.af.security;
 
 import com.alibaba.fastjson.JSONObject;
+import com.gt.common.constant.ReturnCode;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -20,8 +21,8 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
     public void commence(HttpServletRequest req, HttpServletResponse resp, AuthenticationException e) throws IOException, ServletException {
         resp.setContentType("application/json;charset=UTF-8");
         JSONObject resultObj = new JSONObject();
-        resultObj.put("code", HttpStatus.UNAUTHORIZED.value());
-        resultObj.put("msg","用户未登录，无权访问！");
+        resultObj.put("code", ReturnCode.userUnauthorized.getCode());
+        resultObj.put("msg",ReturnCode.userUnauthorized.getMsg());
         resp.getWriter().write(resultObj.toString());
     }
 }

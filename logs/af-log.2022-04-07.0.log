@@ -105,7 +105,7 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException: null
-	at com.gt.af.s.model.UserInfo.getAuthorities(UserInfo.java:25)
+	at com.gt.af.s.domain.UserInfo.getAuthorities(UserInfo.java:25)
 	at com.gt.af.config.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:49)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
 	... 46 common frames omitted
@@ -172,7 +172,7 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException: null
-	at com.gt.af.s.model.UserInfo.getAuthorities(UserInfo.java:25)
+	at com.gt.af.s.domain.UserInfo.getAuthorities(UserInfo.java:25)
 	at com.gt.af.config.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:49)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
 	... 46 common frames omitted
@@ -228,7 +228,7 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException: null
-	at com.gt.af.s.model.UserInfo.getAuthorities(UserInfo.java:25)
+	at com.gt.af.s.domain.UserInfo.getAuthorities(UserInfo.java:25)
 	at com.gt.af.config.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:49)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
 	... 46 common frames omitted
@@ -470,7 +470,7 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException: null
-	at com.gt.af.s.model.UserInfo.getAuthorities(UserInfo.java:25)
+	at com.gt.af.s.domain.UserInfo.getAuthorities(UserInfo.java:25)
 	at com.gt.af.config.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:49)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
 	... 46 common frames omitted
@@ -608,7 +608,7 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException: null
-	at com.gt.af.s.model.UserInfo.getAuthorities(UserInfo.java:25)
+	at com.gt.af.s.domain.UserInfo.getAuthorities(UserInfo.java:25)
 	at com.gt.af.config.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:49)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
 	... 46 common frames omitted
@@ -681,7 +681,7 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException: null
-	at com.gt.af.s.model.UserInfo.getAuthorities(UserInfo.java:25)
+	at com.gt.af.s.domain.UserInfo.getAuthorities(UserInfo.java:25)
 	at com.gt.af.config.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:49)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
 	... 46 common frames omitted
@@ -750,7 +750,7 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException: null
-	at com.gt.af.s.model.UserInfo.getAuthorities(UserInfo.java:25)
+	at com.gt.af.s.domain.UserInfo.getAuthorities(UserInfo.java:25)
 	at com.gt.af.config.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:49)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
 	... 46 common frames omitted

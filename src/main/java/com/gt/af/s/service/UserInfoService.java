@@ -1,7 +1,7 @@
 package com.gt.af.s.service;
 
 import com.gt.af.s.mapper.SysUserMapper;
-import com.gt.af.s.model.SysUser;
+import com.gt.af.s.domain.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

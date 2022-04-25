@@ -50,8 +50,8 @@ Consider defining a bean of type 'org.springframework.security.web.authenticatio
 09:18:02.158 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 09:18:02.212 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 09:18:02.585 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-09:18:02.654 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'distinct' in 'class com.gt.af.s.model.UserInfo'] with root cause
-org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'distinct' in 'class com.gt.af.s.model.UserInfo'
+09:18:02.654 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'distinct' in 'class com.gt.af.s.domain.UserInfo'] with root cause
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'distinct' in 'class com.gt.af.s.domain.UserInfo'
 	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:374)
 	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164)
 	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)

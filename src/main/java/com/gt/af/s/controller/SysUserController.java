@@ -1,7 +1,7 @@
 package com.gt.af.s.controller;
 
 
-import com.gt.af.s.model.SysUser;
+import com.gt.af.s.domain.SysUser;
 import com.gt.af.s.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

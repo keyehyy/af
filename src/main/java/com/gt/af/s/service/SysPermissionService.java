@@ -1,7 +1,7 @@
 package com.gt.af.s.service;
 
 import com.gt.af.s.mapper.SysPermissionMapper;
-import com.gt.af.s.model.SysPermission;
+import com.gt.af.s.domain.SysPermission;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

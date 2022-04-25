@@ -1,6 +1,6 @@
 package com.gt.af.s.mapper;
 
-import com.gt.af.s.model.SysUser;
+import com.gt.af.s.domain.SysUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

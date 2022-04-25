@@ -1,6 +1,7 @@
 package com.gt.af.security;
 
 import com.alibaba.fastjson.JSONObject;
+import com.gt.common.constant.ReturnCode;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
@@ -20,8 +21,8 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
     public void handle(HttpServletRequest req, HttpServletResponse resp, AccessDeniedException e) throws IOException, ServletException {
         resp.setContentType("application/json;charset=UTF-8");
         JSONObject resultObj = new JSONObject();
-        resultObj.put("code", HttpServletResponse.SC_FORBIDDEN);
-        resultObj.put("msg","权限不足,请联系管理员!");
+        resultObj.put("code", ReturnCode.insufficientPermissions.getCode());
+        resultObj.put("msg",ReturnCode.insufficientPermissions.getMsg());
         resp.getWriter().write(resultObj.toString());
     }
 }

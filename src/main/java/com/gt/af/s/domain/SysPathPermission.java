@@ -1,4 +1,4 @@
-package com.gt.af.s.model;
+package com.gt.af.s.domain;
 
 import java.io.Serializable;
 

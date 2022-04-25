@@ -1,7 +1,6 @@
 package com.gt.af.s.mapper;
-import com.gt.af.s.model.SysPermission;
+import com.gt.af.s.domain.SysPermission;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;

@@ -1,5 +1,5 @@
 package com.gt.af.s.mapper;
-import com.gt.af.s.model.SysPath;
+import com.gt.af.s.domain.SysPath;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

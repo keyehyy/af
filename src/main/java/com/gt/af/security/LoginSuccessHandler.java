@@ -42,7 +42,7 @@ public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessH
         //ajax请求认证方式
         response.setContentType("application/json;charset=UTF-8");
         JSONObject resultObj = new JSONObject();
-        resultObj.put("code", HttpStatus.OK.value());
+        resultObj.put("code", "0");
         resultObj.put("msg","登录成功");
         response.getWriter().write(resultObj.toString());
     }
